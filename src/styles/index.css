@@ -3,3 +3,18 @@
     background-color: blue;
 } */
 @import "./icon.less";
+
+/* 自定义类名，全局用 sass*/
+.app-nav-bar {
+    background-color: #3296fa !important;
+
+}
+
+.app-nav-bar .van-nav-bar__title,
+.app-nav-bar .van-icon {
+    color: white !important;
+}
+
+body {
+    background: #f5f7f9;
+}
