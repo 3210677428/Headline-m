@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import {login}from '@/api/user'
+import { login } from '@/api/user'
 
 export default {
   name: "LoginIndex",
@@ -36,13 +36,13 @@ export default {
     return {
       user: {
         phone: "",
-        code: "",
-      },
+        code: ""
+      }
     };
   },
   methods:{
-    onLogin(){
-      // 
+  async onLogin(){
+     const res= login(this.user)
     }
   }
 };
