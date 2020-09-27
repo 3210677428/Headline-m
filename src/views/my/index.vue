@@ -21,13 +21,13 @@
         <van-grid-item class="data-info-item">
           <div slot="text" class="text-wrap">
             <div class="count">0</div>
-            <div  class="text">头条</div>
+            <div class="text">头条</div>
           </div>
         </van-grid-item>
         <van-grid-item class="data-info-item">
           <div slot="text" class="text-wrap">
             <div class="count">99</div>
-            <div  class="text">关注</div>
+            <div class="text">关注</div>
           </div>
         </van-grid-item>
         <van-grid-item class="data-info-item">
@@ -39,18 +39,23 @@
         <van-grid-item class="data-info-item">
           <div slot="text" class="text-wrap">
             <div class="count">1.2亿</div>
-            <div  class="text">获赞</div>
+            <div class="text">获赞</div>
           </div>
         </van-grid-item>
       </van-grid>
     </van-cell-group>
-    <van-grid :column-num="2">
-      <van-grid-item icon="star-o" text="收藏" />
-      <van-grid-item icon-prefix="lsongtao" icon="lishi" text="历史" />
+    <van-grid :column-num="2" class="nav-grid">
+      <van-grid-item icon="star-o" text="收藏" class="nav-grid-item mt-1" />
+      <van-grid-item
+        icon-prefix="lsongtao"
+        icon="lishi"
+        text="历史"
+        class="nav-grid-item"
+      />
     </van-grid>
     <van-cell title="消息通知" is-link to="/" />
-    <van-cell title="小智同学" is-link to="/" />
-    <van-cell title="退出登录" />
+    <van-cell class="mt-2" title="AI客服" is-link to="/" />
+    <van-cell class="go-out mt-1" title="退出登录" />
   </div>
 </template>
 
@@ -82,36 +87,58 @@ export default {
         font-weight: 700;
         opacity: 0.8;
       }
-      .update-btn{
+      .update-btn {
         height: 16px;
         font-size: 10px;
         color: #666666;
         opacity: 0.5;
       }
     }
-    .data-info{
-      
-      .data-info-item{
-        height:65px;
-        color:white;
-        .text-wrap{
+
+    .data-info {
+      .data-info-item {
+        height: 65px;
+        color: white;
+        .text-wrap {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          .count{
-          font-size: 18px;
+          .count {
+            font-size: 18px;
+          }
+          .text {
+            font-size: 11px;
+          }
         }
-        .text{
-          font-size: 11px;
-        }
-        }
-        
       }
     }
     /deep/ .van-grid-item__content {
       background-color: unset;
     }
   }
+  .nav-grid {
+        .nav-grid-item {
+          height: 70px;
+        /deep/  .van-icon{
+            font-size: 22px;
+            color: red;
+          }
+         /deep/ .lsongtao{
+            font-size: 22px;
+            color: orange;
+          }
+        }
+      }
+      .go-out{
+        text-align: center;
+        color: #d86262;
+      }
+      .mt-1{
+        margin-top: 4.5px;
+      }
+      .mt-2{
+        margin-top: 1.5px;
+      }
 }
 </style>
