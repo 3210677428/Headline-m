@@ -2,10 +2,11 @@
 import request from '@/utils/request'
 
 /* 登录注册 */
-export const login=data=>{
-    return request({
-        method:'POST',
-        url:' /app/v1_0/authorizations',
-        data
-    })
+export const login = data => {
+  return request({
+    // ' Content-Type': 'application/json',
+    method: 'POST',
+    url: '/app/v1_0/authorizations',
+    data
+  })
 }

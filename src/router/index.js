@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 // import Login from '@/views/login'
-// 路由懒加载
+// 路由组件懒加载
 // const Login=()=>import('@/views/login')
 
 

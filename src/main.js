@@ -15,8 +15,10 @@ Vue.use(Vant)
 
 Vue.config.productionTip = false
 
+// $mount()
 new Vue({
+  el:'#app',
   router,
   store,
   render: h => h(App)
-}).$mount('#app')
+})
