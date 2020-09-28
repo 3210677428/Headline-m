@@ -17,7 +17,7 @@
           slot="icon"
         />
         <div class="name" slot="title">我变秃了就变强了</div>
-        <van-button to="/edit" class="update-btn" size="small" round="true"
+        <van-button to="/layout/my/edit" class="update-btn" size="small" round="true"
           >编辑资料</van-button
         >
       </van-cell>
@@ -50,7 +50,7 @@
     </van-cell-group>
     <van-grid :column-num="2" class="nav-grid">
       <van-grid-item
-        to="/collect"
+        to="/layout/my/collect"
         icon="star-o"
         text="收藏"
         class="nav-grid-item mt-1"
@@ -60,11 +60,11 @@
         icon="lishi"
         text="历史"
         class="nav-grid-item"
-        to="/history"
+        to="/layout/my/history"
       />
     </van-grid>
-    <van-cell title="消息通知" is-link to="/info" />
-    <van-cell class="mt-2" title="AI客服" is-link to="/ai" />
+    <van-cell title="消息通知" is-link to="/layout/my/info" />
+    <van-cell class="mt-2" title="AI客服" is-link to="/layout/my/ai" />
     <van-cell class="go-out mt-1" title="退出登录" to="/login" />
   </div>
 </template>

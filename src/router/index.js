@@ -20,47 +20,47 @@ const routes = [
     component: () => import('../views/layout/'),
     children: [{
         // 默认子路由''
-        path: '/home',
+        path: 'home',
         name: 'home',
         component: () => import('@/views/home/')
       },
       {
-        path: '/QA',
+        path: 'QA',
         name: 'QA',
         component: () => import('@/views/QA/')
       },
       {
-        path: '/video',
+        path: 'video',
         name: 'video',
         component: () => import('@/views/video/')
       },
       {
-        path: '/my',
+        path: 'my',
         name: 'my',
         component: () => import('@/views/my/')
       },
       {
-        path:'/info',
+        path:'my/info',
         name:'info',
         component: () => import('@/views/info/')
       },
       {
-        path:'/ai',
+        path:'my/ai',
         name:'ai',
         component: () => import('@/views/ai/')
       },
       {
-        path:'/collect',
+        path:'my/collect',
         name:'collect',
         component: () => import('@/views/collect/')
       },
       {
-        path:'/edit',
+        path:'my/edit',
         name:'edit',
         component: () => import('@/views/edit/')
       },
       {
-        path:'/history',
+        path:'my/history',
         name:'history',
         component: () => import('@/views/history/')
       },

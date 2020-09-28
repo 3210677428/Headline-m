@@ -13,7 +13,7 @@
     </van-nav-bar>
 
     <van-tabs v-model="active">
-      <van-tab title="推荐">暂无更多内容</van-tab>
+      <van-tab title="推荐">待开发......</van-tab>
       <van-tab title="标签 2">暂无更多内容</van-tab>
       <van-tab title="标签 3">暂无更多内容</van-tab>
       <van-tab title="标签 4">暂无更多内容</van-tab>
@@ -34,7 +34,7 @@ export default {
   name: "HomeIndex",
   data: function () {
     return {
-      active: 2,
+      active: 0,
     };
   },
   created() {

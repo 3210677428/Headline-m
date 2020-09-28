@@ -34,7 +34,7 @@
     </van-cell-group>
     <!-- 尽量不给组件标签，不影响 -->
     <div class="login-btn-wrap">
-      <van-button to="/my" type="info" block class="login-btn" @click="onLogin"
+      <van-button to="/layout/my" type="info" block class="login-btn" @click="onLogin"
         >登录</van-button
       >
     </div>
