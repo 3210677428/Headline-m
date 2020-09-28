@@ -38,7 +38,32 @@ const routes = [
         path: '/my',
         name: 'my',
         component: () => import('@/views/my/')
-      }
+      },
+      {
+        path:'/info',
+        name:'info',
+        component: () => import('@/views/info/')
+      },
+      {
+        path:'/ai',
+        name:'ai',
+        component: () => import('@/views/ai/')
+      },
+      {
+        path:'/collect',
+        name:'collect',
+        component: () => import('@/views/collect/')
+      },
+      {
+        path:'/edit',
+        name:'edit',
+        component: () => import('@/views/edit/')
+      },
+      {
+        path:'/history',
+        name:'history',
+        component: () => import('@/views/history/')
+      },
     ]
   },
   {

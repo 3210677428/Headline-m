@@ -2,10 +2,11 @@
   <div class="login-container">
     <van-nav-bar
       title="登录"
-      left-arrow
-      @click-left="$router.back()"
+      
       class="app-nav-bar"
     />
+    <!-- left-arrow
+      @click-left="$router.back()" -->
     <!-- $router.back()从哪来，回哪去，上一次地址 -->
 
     <!-- 登录表单 -->
@@ -107,8 +108,11 @@ export default {
 }
 .van-popup--center{
   padding:30px;
+  width: 50%;
+  text-align: center;
   span{
     color: red;
   }
+  
 }
 </style>

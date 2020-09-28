@@ -9,13 +9,17 @@
         center
       >
         <van-image
+          @click="pre"
           class="avatar"
+          :showIndex="false"
           round
           src="https://pic.downk.cc/item/5f65ac41160a154a678b5731.jpg"
           slot="icon"
         />
         <div class="name" slot="title">我变秃了就变强了</div>
-        <van-button class="update-btn" size="small" round="true">编辑资料</van-button>
+        <van-button to="/edit" class="update-btn" size="small" round="true"
+          >编辑资料</van-button
+        >
       </van-cell>
       <van-grid class="data-info" :border="false">
         <van-grid-item class="data-info-item">
@@ -45,23 +49,35 @@
       </van-grid>
     </van-cell-group>
     <van-grid :column-num="2" class="nav-grid">
-      <van-grid-item icon="star-o" text="收藏" class="nav-grid-item mt-1" />
+      <van-grid-item
+        to="/collect"
+        icon="star-o"
+        text="收藏"
+        class="nav-grid-item mt-1"
+      />
       <van-grid-item
         icon-prefix="lsongtao"
         icon="lishi"
         text="历史"
         class="nav-grid-item"
+        to="/history"
       />
     </van-grid>
-    <van-cell title="消息通知" is-link to="/home" />
-    <van-cell class="mt-2" title="AI客服" is-link to="/home" />
-    <van-cell class="go-out mt-1" title="退出登录" to="/login"/>
+    <van-cell title="消息通知" is-link to="/info" />
+    <van-cell class="mt-2" title="AI客服" is-link to="/ai" />
+    <van-cell class="go-out mt-1" title="退出登录" to="/login" />
   </div>
 </template>
 
 <script>
+import { ImagePreview } from "vant";
 export default {
   name: "MyIndex",
+  methods: {
+    pre() {
+      ImagePreview({images:["https://pic.downk.cc/item/5f65ac41160a154a678b5731.jpg"],showIndex:false});
+    },
+  },
 };
 </script>
 
@@ -118,27 +134,27 @@ export default {
     }
   }
   .nav-grid {
-        .nav-grid-item {
-          height: 70px;
-        /deep/  .van-icon{
-            font-size: 22px;
-            color: red;
-          }
-         /deep/ .lsongtao{
-            font-size: 22px;
-            color: orange;
-          }
-        }
+    .nav-grid-item {
+      height: 70px;
+      /deep/ .van-icon {
+        font-size: 22px;
+        color: red;
       }
-      .go-out{
-        text-align: center;
-        color: #d86262;
+      /deep/ .lsongtao {
+        font-size: 22px;
+        color: orange;
       }
-      .mt-1{
-        margin-top: 4.5px;
-      }
-      .mt-2{
-        margin-top: 1.5px;
-      }
+    }
+  }
+  .go-out {
+    text-align: center;
+    color: #d86262;
+  }
+  .mt-1 {
+    margin-top: 4.5px;
+  }
+  .mt-2 {
+    margin-top: 1.5px;
+  }
 }
 </style>
