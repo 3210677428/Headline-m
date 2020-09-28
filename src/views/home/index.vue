@@ -13,28 +13,39 @@
     </van-nav-bar>
 
     <van-tabs v-model="active">
-      <van-tab title="标签 1">内容 1</van-tab>
-      <van-tab title="标签 2">内容 2</van-tab>
-      <van-tab title="标签 3">内容 3</van-tab>
-      <van-tab title="标签 4">内容 4</van-tab>
-      <van-tab title="标签 5">内容 5</van-tab>
-      <van-tab title="标签 6">内容 6</van-tab>
-      <van-tab title="标签 7">内容 7</van-tab>
-      <van-tab title="标签 8">内容 8</van-tab>
-      <van-tab title="标签 9">内容 9</van-tab>
-      <van-tab title="标签 10">内容 10</van-tab>
+      <van-tab title="推荐">暂无更多内容</van-tab>
+      <van-tab title="标签 2">暂无更多内容</van-tab>
+      <van-tab title="标签 3">暂无更多内容</van-tab>
+      <van-tab title="标签 4">暂无更多内容</van-tab>
+      <van-tab title="标签 5">暂无更多内容</van-tab>
+      <van-tab title="标签 6">暂无更多内容</van-tab>
+      <van-tab title="标签 7">暂无更多内容</van-tab>
+      <van-tab title="标签 8">暂无更多内容</van-tab>
+      <van-tab title="标签 9">暂无更多内容</van-tab>
+      <van-tab title="标签 10">暂无更多内容</van-tab>
     </van-tabs>
   </div>
 </template>
 
 <script>
+import { getUserChannels } from "@/api/user";
+
 export default {
   name: "HomeIndex",
-  data:function(){
+  data: function () {
     return {
-      active:2
-    }
-  }
+      active: 2,
+    };
+  },
+  created() {
+    this.loadChannels();
+  },
+  methods: {
+    async loadChannels() {
+      const { data } = await getUserChannels();
+      console.log(data);
+    },
+  },
 };
 </script>
 
