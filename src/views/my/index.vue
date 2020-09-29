@@ -53,7 +53,7 @@
         to="/layout/my/collect"
         icon="star-o"
         text="收藏"
-        class="nav-grid-item mt-1"
+        class="nav-grid-item"
       />
       <van-grid-item
         icon-prefix="lsongtao"
@@ -63,8 +63,11 @@
         to="/layout/my/history"
       />
     </van-grid>
-    <van-cell title="消息通知" is-link to="/layout/my/info" />
+    <van-cell class="mt-1" title="消息通知" is-link to="/layout/my/info"/>
+    <van-cell title="个人信息" is-link to="/layout/my/rna"/>
+    <van-cell title="用户反馈" is-link to="/layout/my/feedback"/>
     <van-cell class="mt-2" title="AI客服" is-link to="/layout/my/ai" />
+    <van-cell title="系统设置" is-link to="/layout/my/sysSet"/>
     <van-cell class="go-out mt-1" title="退出登录" to="/login" />
   </div>
 </template>

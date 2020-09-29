@@ -64,6 +64,21 @@ const routes = [
         name:'history',
         component: () => import('@/views/history/')
       },
+      {
+        path:'my/feedback',
+        name:'history',
+        component: () => import('@/views/feedback/')
+      },
+      {
+        path:'my/rna',
+        name:'history',
+        component: () => import('@/views/rna/')
+      },
+      {
+        path:'my/sysSet',
+        name:'history',
+        component: () => import('@/views/sysSet/')
+      },
     ]
   },
   {

@@ -2,6 +2,7 @@
   <div class="layout-container">
     <!-- 子路由出口 -->
     <router-view />
+    <div style="height:50px"></div>
     <!-- 底部导航栏 -->
     <van-tabbar v-model="active" route>
       <van-tabbar-item icon="home-o" to='/layout/home'>首页</van-tabbar-item>
